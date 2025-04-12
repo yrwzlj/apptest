@@ -14,9 +14,9 @@ import lombok.experimental.Accessors;
 @TableName("user")
 public class UserDTO extends DataEntity<UserDTO> {
 
-    private String uid;
+    private Long uid;
 
     private String phone;
 
-    private String username;
+    private String userName;
 }

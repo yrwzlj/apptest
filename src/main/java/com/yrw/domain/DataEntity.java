@@ -1,5 +1,7 @@
 package domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
@@ -16,8 +18,9 @@ public abstract class DataEntity<T> {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @TableId(type = IdType.AUTO)
     @Column(name = "id", nullable = false)
-    protected String id;
+    protected Long id;
 
     protected Date createDate;
 
