@@ -24,7 +24,7 @@ public class UserProcessor {
         UserDTO userDTO = new UserDTO();
         userDTO.setUid(requestType.getUid());
         userDTO.setPhone(requestType.getPhone());
-        userDTO.setUsername(requestType.getUsername());
+        userDTO.setUserName(requestType.getUsername());
         return userDTO;
     }
 
@@ -32,7 +32,7 @@ public class UserProcessor {
         CommonResult result = (new CommonResult()).init();
 
         QueryWrapper<UserDTO> queryWrapper = new QueryWrapper();
-        queryWrapper.eq("username", requestType.getUsername());
+        queryWrapper.eq("user_name", requestType.getUsername());
         List<UserDTO> userDTOS = userMapper.selectList(queryWrapper);
         if (userDTOS != null && !userDTOS.isEmpty()) {
             return (CommonResult) result.success().end();

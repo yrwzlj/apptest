@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
 @TableName("`user`")
 public class UserRequestType extends DataEntity<UserRequestType> {
 
-    private String uid;
+    private Long uid;
 
     private String phone;
 
